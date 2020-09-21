@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+    .View.UserView
+        h1.Banner Howdy, #{userProfile.nickname}!
+        .Message
+            .Title
+            block content   
+                br 
+                .w3-container
+                    .w3-card-4
+                        header
+                        h1 Welcome #{user.nickname}
+                        img(src=user.picture)
+                        h2 User Profile
+                        p This is the content of <code>req.user</code>
+                        p Note: <code>_raw</code> and <code>_json</code> properties have been ommited 
+                        pre 
+                            code #{userProfile}
+        .NavButtons
+            a(href="/logout")
+                .NavButton Log out
